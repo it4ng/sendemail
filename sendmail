@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ -z "$RECIPIENT" ] && echo "RECIPIENT is not set, exiting" && exit 1
+[ -z "$SENDER" ] && echo "SENDER is not set, exiting" && exit 1
+[ -z "$SUBJECT" ] && echo "SUBJECT is not set, exiting" && exit 1
+[ -z "$MESSAGE" ] && echo "MESSAGE is not set, exiting" && exit 1
+[ -z "$SERVER" ] && echo "SERVER is not set, exiting" && exit 1
+
+sendemail -f $SENDER -t $RECIPIENT -u $SUBJECT -m "$MESSAGE" -s $SERVER
