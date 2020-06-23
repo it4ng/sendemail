@@ -6,4 +6,4 @@
 [ -z "$MESSAGE" ] && echo "MESSAGE is not set, exiting" && exit 1
 [ -z "$SERVER" ] && echo "SERVER is not set, exiting" && exit 1
 
-sendemail -f $SENDER -t $RECIPIENT -u $SUBJECT -m "$MESSAGE" -s $SERVER
+sendEmail -f $SENDER -t $RECIPIENT -u $SUBJECT -m "$MESSAGE" -s $SERVER
