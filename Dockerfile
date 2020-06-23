@@ -1,6 +1,7 @@
 FROM alpine:latest
 
 RUN apk update && \
+    apk add perl && \
     apk add bash && rm -rf /var/cache/apk/*
 
 RUN wget http://caspian.dotconf.net/menu/Software/SendEmail/sendEmail-v1.56.tar.gz -P /tmp/ && \
