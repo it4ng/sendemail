@@ -1,9 +1,9 @@
 #!/bin/sh
 
-[ -z "$RECIPIENT" ] && echo "RECIPIENT is not set, exiting" && exit 1
-[ -z "$SENDER" ] && echo "SENDER is not set, exiting" && exit 1
-[ -z "$SUBJECT" ] && echo "SUBJECT is not set, exiting" && exit 1
-[ -z "$MESSAGE" ] && echo "MESSAGE is not set, exiting" && exit 1
-[ -z "$SERVER" ] && echo "SERVER is not set, exiting" && exit 1
+[ -z "$MAIL_RECIPIENT" ] && echo "MAIL_RECIPIENT is not set, exiting" && exit 1
+[ -z "$MAIL_SENDER" ] && echo "MAIL_SENDER is not set, exiting" && exit 1
+[ -z "$MAIL_SUBJECT" ] && echo "MAIL_SUBJECT is not set, exiting" && exit 1
+[ -z "$MAIL_MESSAGE" ] && echo "MAIL_MESSAGE is not set, exiting" && exit 1
+[ -z "$MAIL_SERVER" ] && echo "MAIL_SERVER is not set, exiting" && exit 1
 
-sendemail -f $SENDER -t $RECIPIENT -u $SUBJECT -m "$MESSAGE" -s $SERVER
+sendemail -f $MAIL_SENDER -t $MAIL_RECIPIENT -u "$MAIL_SUBJECT" -m "$MAIL_MESSAGE" -s $MAIL_SERVER
