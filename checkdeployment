@@ -1,0 +1,5 @@
+#!/bin/sh
+
+[ -z "$CI_ENVIRONMENT_URL" ] && echo "ENVIRONMENT" not set, exiting" && exit 1
+
+curl -I $CI_ENVIRONMENT_URL -sSf >/dev/null
